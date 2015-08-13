@@ -1,0 +1,12 @@
+express项目各个部分说明
+
+package.json 存放着工程的信息及模块依赖，当在dependencies中添加依赖的模块时，运行npm install, npm 会检查当前目录下的 package.json,并自动安装所有制定模块.
+
+node_modules:存放package.json中安装的模块，当你在package.json中添加依赖的模块并安装后，该模块会存放在这个文件下。
+
+public:存放image,css,js等文件。
+
+views:存放视图文件，或者模板文件
+
+bin:存放可执行文件
+
