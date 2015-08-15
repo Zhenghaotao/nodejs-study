@@ -1,7 +1,8 @@
 /**
  * Created by taotao on 15-8-15.
  */
-var mongodb = require('./db');
+var mongodb = require('./db'),
+    markdown = require('markdown').markdown;
 
 function Post(name, title, post) {
     this.name = name;
@@ -18,11 +19,11 @@ Post.prototype.save = function (callback) {
     //存储各种时间格式，方便以后扩展
     var time = {
         date: date,
-        year: date.getFullYear(),
-        month: date.getFullYear() + "-" + (date.getMonth() + 1),
-        day: date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
-        minute: date.getFullYear() + "-" + (date.getMonth + 1) + "-" + date.getDate() + " " + date.getHours()
-        + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
+        year : date.getFullYear(),
+        month : date.getFullYear() + "-" + (date.getMonth() + 1),
+        day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+        minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+        date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
     };
     //要存入数据库的文档
     var post = {
@@ -81,6 +82,10 @@ Post.get = function (name, callback) {
                 if (err) {
                     return callback(err);//失败! 返回 err
                 }
+                //解析 markdown 为 html
+                docs.forEach(function(doc){
+                    doc.post = markdown.toHTML(doc.post);
+                });
                 callback(null, docs);//成功! 以数组形式返回查询的结果
             });
         });
