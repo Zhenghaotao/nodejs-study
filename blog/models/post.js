@@ -30,7 +30,8 @@ Post.prototype.save = function (callback) {
         name: this.name,
         time: time,
         title: this.title,
-        post: this.post
+        post: this.post,
+        comments: []
     };
     //打开数据库
     mongodb.open(function (err, db) {
@@ -106,32 +107,38 @@ Post.getOne = function (name, day, title, callback) {
             }
             //根据用户名,发表日期和文章进行查询
             collection.findOne({
-                "name": name,
+                "name": encodeURI(name),
                 "time.day": day,
-                "title": title
-            },function(err,doc){
-                mongodb.close();
-                if(err){
+                "title": encodeURI(title)
+            }, function (err, doc) {
+                if (err) {
+                    mongodb.close();
                     return callback(err);
                 }
                 //解析 markdown 为 html
-                doc.post = markdown.toHTML(doc.post);
-                callback(null,doc);//返回查询结果的一篇文章
+                if (doc) {
+                    doc.post = markdown.toHTML(doc.post);
+                    doc.comments.forEach(function (comment) {
+                        comment.content = markdown.toHTML(comment.content);
+                    });
+                }
+                callback(null, doc);//返回查询结果的一篇文章
             });
 
         });
     });
 }
 //返回原始的发表的内容(markdown格式)
-Post.edit = function(name,day,title,callback){
+Post.edit = function (name, day, title, callback) {
     //打开数据库
-    mongodb.open(function(err,db){
-        if(err){
+
+    mongodb.open(function (err, db) {
+        if (err) {
             return callback(err);
         }
         //读取 posts 集合
-        db.collection('posts',function(err,collection){
-            if(err){
+        db.collection('posts', function (err, collection) {
+            if (err) {
                 mongodb.close();
                 return callback(err);
             }
@@ -139,40 +146,40 @@ Post.edit = function(name,day,title,callback){
             collection.findOne({
                 "name": name,
                 "time.day": day,
-                "title":title
-            },function(err,doc){
+                "title": title
+            }, function (err, doc) {
                 mongodb.close();
-                if(err){
+                if (err) {
                     return callback(err);
                 }
-                callback(null,doc);//返回查询的一篇文章(markdown 格式)
+                callback(null, doc);//返回查询的一篇文章(markdown 格式)
             });
         });
     });
 };
 //更新一篇文章及其相关信息
-Post.update = function(name,day,title,post,callback){
+Post.update = function (name, day, title, post, callback) {
     //打开数据库
-    mongodb.open(function(err,db){
-        if(err){
+    mongodb.open(function (err, db) {
+        if (err) {
             return callback(err);
         }
         //读取 posts 集合
-        db.collection('posts',function(err,collection){
-           if(err){
-               mongodb.close();
-               return callback(err);
-           }
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                mongodb.close();
+                return callback(err);
+            }
             //更新文章内容
             collection.update({
-               'name':name,
-                'time.day':day,
+                'name': name,
+                'time.day': day,
                 "title": title
-            },{
+            }, {
                 $set: {post: post}
-            },function(err){
+            }, function (err) {
                 mongodb.close();
-                if(err){
+                if (err) {
                     return callback(err);
                 }
                 callback(null);
@@ -181,15 +188,15 @@ Post.update = function(name,day,title,post,callback){
     });
 }
 //删除一篇文章
-Post.remove = function(name,day,title,callback){
+Post.remove = function (name, day, title, callback) {
     //打开数据库
-    mongodb.open(function(err,db){
-        if(err){
+    mongodb.open(function (err, db) {
+        if (err) {
             return callback(err);
         }
         //读取posts集合
-        db.collection('posts',function(err,collection){
-            if(err){
+        db.collection('posts', function (err, collection) {
+            if (err) {
                 mongodb.close();
                 return callback(err);
             }
@@ -198,11 +205,11 @@ Post.remove = function(name,day,title,callback){
                 "name": name,
                 "time.day": day,
                 "title": title
-            },{
-                w:1
-            },function(err){
+            }, {
+                w: 1
+            }, function (err) {
                 mongodb.close();
-                if(err){
+                if (err) {
                     return callback(err);
                 }
                 callback(null);
