@@ -2,7 +2,6 @@
  * Created by taotao on 15-8-15.
  */
 var mongodb = require('./db');
-
 function User(user){
     this.name = user.name;
     this.password = user.password;
@@ -69,6 +68,7 @@ User.get = function(name,callback){
         });
     });
 };
+
 
 
 
