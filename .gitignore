@@ -3,7 +3,7 @@ blog/_tmp
 blog/local.0
 blog/local.ns
 blog/mongod.lock
-node_crawl/node_modules
+node_crawl/blog/node_modules
 
 
 
