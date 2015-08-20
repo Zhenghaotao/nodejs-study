@@ -1,0 +1,406 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/taotao/project/nodejs-study/node_crawl',
+6 verbose install   [ 'debug', 'cheerio', 'request', 'async', 'mysql' ] ]
+7 info preinstall sina-blog-proxy@0.0.1
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'debug@0.7.2', null ]
+10 verbose cache add name=undefined spec="debug@0.7.2" args=["debug@0.7.2",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'debug@0.7.2',
+11 verbose parsed url   path: 'debug@0.7.2',
+11 verbose parsed url   href: 'debug@0.7.2' }
+12 verbose cache add [ 'cheerio@0.12.3', null ]
+13 verbose cache add name=undefined spec="cheerio@0.12.3" args=["cheerio@0.12.3",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'cheerio@0.12.3',
+14 verbose parsed url   path: 'cheerio@0.12.3',
+14 verbose parsed url   href: 'cheerio@0.12.3' }
+15 verbose cache add [ 'request@2.27.0', null ]
+16 verbose cache add name=undefined spec="request@2.27.0" args=["request@2.27.0",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'request@2.27.0',
+17 verbose parsed url   path: 'request@2.27.0',
+17 verbose parsed url   href: 'request@2.27.0' }
+18 verbose cache add [ 'async@0.2.9', null ]
+19 verbose cache add name=undefined spec="async@0.2.9" args=["async@0.2.9",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'async@0.2.9',
+20 verbose parsed url   path: 'async@0.2.9',
+20 verbose parsed url   href: 'async@0.2.9' }
+21 verbose cache add name="debug" spec="0.7.2" args=["debug","0.7.2"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '0.7.2',
+22 verbose parsed url   path: '0.7.2',
+22 verbose parsed url   href: '0.7.2' }
+23 verbose addNamed [ 'debug', '0.7.2' ]
+24 verbose addNamed [ '0.7.2', '0.7.2' ]
+25 verbose cache add name="cheerio" spec="0.12.3" args=["cheerio","0.12.3"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '0.12.3',
+26 verbose parsed url   path: '0.12.3',
+26 verbose parsed url   href: '0.12.3' }
+27 verbose addNamed [ 'cheerio', '0.12.3' ]
+28 verbose addNamed [ '0.12.3', '0.12.3' ]
+29 verbose cache add name="request" spec="2.27.0" args=["request","2.27.0"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '2.27.0',
+30 verbose parsed url   path: '2.27.0',
+30 verbose parsed url   href: '2.27.0' }
+31 verbose addNamed [ 'request', '2.27.0' ]
+32 verbose addNamed [ '2.27.0', '2.27.0' ]
+33 verbose cache add [ 'mysql@2.x', null ]
+34 verbose cache add name=undefined spec="mysql@2.x" args=["mysql@2.x",null]
+35 verbose parsed url { protocol: null,
+35 verbose parsed url   slashes: null,
+35 verbose parsed url   auth: null,
+35 verbose parsed url   host: null,
+35 verbose parsed url   port: null,
+35 verbose parsed url   hostname: null,
+35 verbose parsed url   hash: null,
+35 verbose parsed url   search: null,
+35 verbose parsed url   query: null,
+35 verbose parsed url   pathname: 'mysql@2.x',
+35 verbose parsed url   path: 'mysql@2.x',
+35 verbose parsed url   href: 'mysql@2.x' }
+36 verbose cache add name="async" spec="0.2.9" args=["async","0.2.9"]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: '0.2.9',
+37 verbose parsed url   path: '0.2.9',
+37 verbose parsed url   href: '0.2.9' }
+38 verbose addNamed [ 'async', '0.2.9' ]
+39 verbose addNamed [ '0.2.9', '0.2.9' ]
+40 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+41 verbose lock debug@0.7.2 /home/taotao/.npm/432e5064-debug-0-7-2.lock
+42 silly lockFile b13413e3-cheerio-0-12-3 cheerio@0.12.3
+43 verbose lock cheerio@0.12.3 /home/taotao/.npm/b13413e3-cheerio-0-12-3.lock
+44 silly lockFile 7b48fbe0-request-2-27-0 request@2.27.0
+45 verbose lock request@2.27.0 /home/taotao/.npm/7b48fbe0-request-2-27-0.lock
+46 silly lockFile be62480b-async-0-2-9 async@0.2.9
+47 verbose lock async@0.2.9 /home/taotao/.npm/be62480b-async-0-2-9.lock
+48 verbose cache add name="mysql" spec="2.x" args=["mysql","2.x"]
+49 verbose parsed url { protocol: null,
+49 verbose parsed url   slashes: null,
+49 verbose parsed url   auth: null,
+49 verbose parsed url   host: null,
+49 verbose parsed url   port: null,
+49 verbose parsed url   hostname: null,
+49 verbose parsed url   hash: null,
+49 verbose parsed url   search: null,
+49 verbose parsed url   query: null,
+49 verbose parsed url   pathname: '2.x',
+49 verbose parsed url   path: '2.x',
+49 verbose parsed url   href: '2.x' }
+50 verbose addNamed [ 'mysql', '2.x' ]
+51 verbose addNamed [ null, '>=2.0.0-0 <3.0.0-0' ]
+52 silly lockFile 442552e3-mysql-2-x mysql@2.x
+53 verbose lock mysql@2.x /home/taotao/.npm/442552e3-mysql-2-x.lock
+54 silly addNameRange { name: 'mysql', range: '>=2.0.0-0 <3.0.0-0', hasData: false }
+55 verbose request where is /cheerio
+56 verbose request registry https://registry.npmjs.org/
+57 verbose request id d286d1a843537a32
+58 verbose url raw /cheerio
+59 verbose url resolving [ 'https://registry.npmjs.org/', './cheerio' ]
+60 verbose url resolved https://registry.npmjs.org/cheerio
+61 verbose request where is https://registry.npmjs.org/cheerio
+62 info trying registry request attempt 1 at 13:47:51
+63 verbose etag "AC4RLYYOVLV39YUKXN617ZCLM"
+64 http GET https://registry.npmjs.org/cheerio
+65 verbose request where is /async
+66 verbose request registry https://registry.npmjs.org/
+67 verbose url raw /async
+68 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+69 verbose url resolved https://registry.npmjs.org/async
+70 verbose request where is https://registry.npmjs.org/async
+71 info trying registry request attempt 1 at 13:47:51
+72 verbose etag "CAEW8YLR20A4167RQTGWUHKCA"
+73 http GET https://registry.npmjs.org/async
+74 verbose request where is /request
+75 verbose request registry https://registry.npmjs.org/
+76 verbose url raw /request
+77 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+78 verbose url resolved https://registry.npmjs.org/request
+79 verbose request where is https://registry.npmjs.org/request
+80 info trying registry request attempt 1 at 13:47:51
+81 verbose etag "4D900EZ0O40TE60I9SABCVYTU"
+82 http GET https://registry.npmjs.org/request
+83 verbose request where is /mysql
+84 verbose request registry https://registry.npmjs.org/
+85 verbose url raw /mysql
+86 verbose url resolving [ 'https://registry.npmjs.org/', './mysql' ]
+87 verbose url resolved https://registry.npmjs.org/mysql
+88 verbose request where is https://registry.npmjs.org/mysql
+89 info trying registry request attempt 1 at 13:47:51
+90 verbose etag "AEK83B7ESS4XJWS1XVGRFJJBN"
+91 http GET https://registry.npmjs.org/mysql
+92 verbose request where is /debug
+93 verbose request registry https://registry.npmjs.org/
+94 verbose url raw /debug
+95 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+96 verbose url resolved https://registry.npmjs.org/debug
+97 verbose request where is https://registry.npmjs.org/debug
+98 info trying registry request attempt 1 at 13:47:51
+99 verbose etag "E0MX0KKIGKITEAX7ZNXZ88FJ4"
+100 http GET https://registry.npmjs.org/debug
+101 http 304 https://registry.npmjs.org/mysql
+102 silly registry.get cb [ 304,
+102 silly registry.get   { date: 'Sun, 16 Aug 2015 05:47:52 GMT',
+102 silly registry.get     via: '1.1 varnish',
+102 silly registry.get     'cache-control': 'max-age=60',
+102 silly registry.get     etag: '"AEK83B7ESS4XJWS1XVGRFJJBN"',
+102 silly registry.get     age: '7',
+102 silly registry.get     connection: 'keep-alive',
+102 silly registry.get     'x-served-by': 'cache-nrt6120-NRT',
+102 silly registry.get     'x-cache': 'HIT',
+102 silly registry.get     'x-cache-hits': '1',
+102 silly registry.get     'x-timer': 'S1439704072.505844,VS0,VE1',
+102 silly registry.get     vary: 'Accept' } ]
+103 verbose etag https://registry.npmjs.org/mysql from cache
+104 silly addNameRange number 2 { name: 'mysql', range: '>=2.0.0-0 <3.0.0-0', hasData: true }
+105 silly addNameRange versions [ 'mysql',
+105 silly addNameRange   [ '0.1.0',
+105 silly addNameRange     '0.2.0',
+105 silly addNameRange     '0.3.0',
+105 silly addNameRange     '0.4.0',
+105 silly addNameRange     '0.5.0',
+105 silly addNameRange     '0.6.0',
+105 silly addNameRange     '0.7.0',
+105 silly addNameRange     '0.8.0',
+105 silly addNameRange     '0.9.0',
+105 silly addNameRange     '0.9.1',
+105 silly addNameRange     '0.9.2',
+105 silly addNameRange     '0.9.3',
+105 silly addNameRange     '0.9.4',
+105 silly addNameRange     '0.9.5',
+105 silly addNameRange     '0.9.6',
+105 silly addNameRange     '2.0.0-alpha',
+105 silly addNameRange     '2.0.0-alpha2',
+105 silly addNameRange     '2.0.0-alpha3',
+105 silly addNameRange     '2.0.0-alpha4',
+105 silly addNameRange     '2.0.0-alpha5',
+105 silly addNameRange     '2.0.0-alpha6',
+105 silly addNameRange     '2.0.0-alpha7',
+105 silly addNameRange     '2.0.0-alpha8',
+105 silly addNameRange     '2.0.0-alpha9',
+105 silly addNameRange     '2.0.0-rc1',
+105 silly addNameRange     '2.0.0-rc2',
+105 silly addNameRange     '2.0.0',
+105 silly addNameRange     '2.0.1',
+105 silly addNameRange     '2.1.0',
+105 silly addNameRange     '2.1.1',
+105 silly addNameRange     '2.2.0',
+105 silly addNameRange     '2.3.0',
+105 silly addNameRange     '2.3.1',
+105 silly addNameRange     '2.3.2',
+105 silly addNameRange     '2.4.0',
+105 silly addNameRange     '2.4.1',
+105 silly addNameRange     '2.4.2',
+105 silly addNameRange     '2.4.3',
+105 silly addNameRange     '2.5.0',
+105 silly addNameRange     '2.5.1',
+105 silly addNameRange     '2.5.2',
+105 silly addNameRange     '2.5.3',
+105 silly addNameRange     '2.5.4',
+105 silly addNameRange     '2.5.5',
+105 silly addNameRange     '2.6.0',
+105 silly addNameRange     '2.6.1',
+105 silly addNameRange     '2.6.2',
+105 silly addNameRange     '2.7.0',
+105 silly addNameRange     '2.8.0' ] ]
+106 verbose addNamed [ 'mysql', '2.8.0' ]
+107 verbose addNamed [ '2.8.0', '2.8.0' ]
+108 silly lockFile 3d726881-mysql-2-8-0 mysql@2.8.0
+109 verbose lock mysql@2.8.0 /home/taotao/.npm/3d726881-mysql-2-8-0.lock
+110 http 304 https://registry.npmjs.org/debug
+111 silly registry.get cb [ 304,
+111 silly registry.get   { date: 'Sun, 16 Aug 2015 05:47:52 GMT',
+111 silly registry.get     via: '1.1 varnish',
+111 silly registry.get     'cache-control': 'max-age=60',
+111 silly registry.get     etag: '"E0MX0KKIGKITEAX7ZNXZ88FJ4"',
+111 silly registry.get     age: '58',
+111 silly registry.get     connection: 'keep-alive',
+111 silly registry.get     'x-served-by': 'cache-nrt6133-NRT',
+111 silly registry.get     'x-cache': 'HIT',
+111 silly registry.get     'x-cache-hits': '1',
+111 silly registry.get     'x-timer': 'S1439704072.536361,VS0,VE1',
+111 silly registry.get     vary: 'Accept' } ]
+112 verbose etag https://registry.npmjs.org/debug from cache
+113 silly lockFile 3d726881-mysql-2-8-0 mysql@2.8.0
+114 silly lockFile 3d726881-mysql-2-8-0 mysql@2.8.0
+115 silly lockFile 442552e3-mysql-2-x mysql@2.x
+116 silly lockFile 442552e3-mysql-2-x mysql@2.x
+117 silly lockFile 4134520d--npmjs-org-debug-debug-0-7-2-tgz https://registry.npmjs.org/debug/-/debug-0.7.2.tgz
+118 verbose lock https://registry.npmjs.org/debug/-/debug-0.7.2.tgz /home/taotao/.npm/4134520d--npmjs-org-debug-debug-0-7-2-tgz.lock
+119 verbose addRemoteTarball [ 'https://registry.npmjs.org/debug/-/debug-0.7.2.tgz',
+119 verbose addRemoteTarball   '056692c86670977f115de82917918b8e8b9a10f0' ]
+120 info retry fetch attempt 1 at 13:47:52
+121 verbose fetch to= /tmp/npm-30931-9eDYqS7n/registry.npmjs.org/debug/-/debug-0.7.2.tgz
+122 http GET https://registry.npmjs.org/debug/-/debug-0.7.2.tgz
+123 http 304 https://registry.npmjs.org/cheerio
+124 silly registry.get cb [ 304,
+124 silly registry.get   { date: 'Sun, 16 Aug 2015 05:47:52 GMT',
+124 silly registry.get     via: '1.1 varnish',
+124 silly registry.get     'cache-control': 'max-age=60',
+124 silly registry.get     etag: '"AC4RLYYOVLV39YUKXN617ZCLM"',
+124 silly registry.get     age: '0',
+124 silly registry.get     connection: 'keep-alive',
+124 silly registry.get     'x-served-by': 'cache-nrt6121-NRT',
+124 silly registry.get     'x-cache': 'HIT',
+124 silly registry.get     'x-cache-hits': '1',
+124 silly registry.get     'x-timer': 'S1439704072.504168,VS0,VE760',
+124 silly registry.get     vary: 'Accept' } ]
+125 verbose etag https://registry.npmjs.org/cheerio from cache
+126 silly lockFile 7bf2141c-s-org-cheerio-cheerio-0-12-3-tgz https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz
+127 verbose lock https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz /home/taotao/.npm/7bf2141c-s-org-cheerio-cheerio-0-12-3-tgz.lock
+128 verbose addRemoteTarball [ 'https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz',
+128 verbose addRemoteTarball   '8eb05ace0a3fc72d9d9ce0b5d364fe8bb565d7fa' ]
+129 info retry fetch attempt 1 at 13:47:53
+130 verbose fetch to= /tmp/npm-30931-9eDYqS7n/registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz
+131 http GET https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz
+132 http 200 https://registry.npmjs.org/debug/-/debug-0.7.2.tgz
+133 silly lockFile 4134520d--npmjs-org-debug-debug-0-7-2-tgz https://registry.npmjs.org/debug/-/debug-0.7.2.tgz
+134 silly lockFile 4134520d--npmjs-org-debug-debug-0-7-2-tgz https://registry.npmjs.org/debug/-/debug-0.7.2.tgz
+135 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+136 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+137 http 200 https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz
+138 silly lockFile 7bf2141c-s-org-cheerio-cheerio-0-12-3-tgz https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz
+139 silly lockFile 7bf2141c-s-org-cheerio-cheerio-0-12-3-tgz https://registry.npmjs.org/cheerio/-/cheerio-0.12.3.tgz
+140 silly lockFile b13413e3-cheerio-0-12-3 cheerio@0.12.3
+141 silly lockFile b13413e3-cheerio-0-12-3 cheerio@0.12.3
+142 http 304 https://registry.npmjs.org/request
+143 silly registry.get cb [ 304,
+143 silly registry.get   { date: 'Sun, 16 Aug 2015 05:47:58 GMT',
+143 silly registry.get     via: '1.1 varnish',
+143 silly registry.get     'cache-control': 'max-age=60',
+143 silly registry.get     etag: '"4D900EZ0O40TE60I9SABCVYTU"',
+143 silly registry.get     age: '1',
+143 silly registry.get     connection: 'keep-alive',
+143 silly registry.get     'x-served-by': 'cache-nrt6128-NRT',
+143 silly registry.get     'x-cache': 'HIT',
+143 silly registry.get     'x-cache-hits': '1',
+143 silly registry.get     'x-timer': 'S1439704078.045486,VS0,VE2',
+143 silly registry.get     vary: 'Accept' } ]
+144 verbose etag https://registry.npmjs.org/request from cache
+145 silly lockFile 601afcd9-s-org-request-request-2-27-0-tgz https://registry.npmjs.org/request/-/request-2.27.0.tgz
+146 verbose lock https://registry.npmjs.org/request/-/request-2.27.0.tgz /home/taotao/.npm/601afcd9-s-org-request-request-2-27-0-tgz.lock
+147 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.27.0.tgz',
+147 verbose addRemoteTarball   'dfb1a224dd3a5a9bade4337012503d710e538668' ]
+148 info retry fetch attempt 1 at 13:47:58
+149 verbose fetch to= /tmp/npm-30931-9eDYqS7n/registry.npmjs.org/request/-/request-2.27.0.tgz
+150 http GET https://registry.npmjs.org/request/-/request-2.27.0.tgz
+151 http 304 https://registry.npmjs.org/async
+152 silly registry.get cb [ 304,
+152 silly registry.get   { date: 'Sun, 16 Aug 2015 05:47:58 GMT',
+152 silly registry.get     via: '1.1 varnish',
+152 silly registry.get     'cache-control': 'max-age=60',
+152 silly registry.get     etag: '"CAEW8YLR20A4167RQTGWUHKCA"',
+152 silly registry.get     age: '8',
+152 silly registry.get     connection: 'keep-alive',
+152 silly registry.get     'x-served-by': 'cache-nrt6123-NRT',
+152 silly registry.get     'x-cache': 'HIT',
+152 silly registry.get     'x-cache-hits': '1',
+152 silly registry.get     'x-timer': 'S1439704078.050799,VS0,VE1',
+152 silly registry.get     vary: 'Accept' } ]
+153 verbose etag https://registry.npmjs.org/async from cache
+154 silly lockFile c060db57--npmjs-org-async-async-0-2-9-tgz https://registry.npmjs.org/async/-/async-0.2.9.tgz
+155 verbose lock https://registry.npmjs.org/async/-/async-0.2.9.tgz /home/taotao/.npm/c060db57--npmjs-org-async-async-0-2-9-tgz.lock
+156 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.2.9.tgz',
+156 verbose addRemoteTarball   'df63060fbf3d33286a76aaf6d55a2986d9ff8619' ]
+157 info retry fetch attempt 1 at 13:48:00
+158 verbose fetch to= /tmp/npm-30931-9eDYqS7n/registry.npmjs.org/async/-/async-0.2.9.tgz
+159 http GET https://registry.npmjs.org/async/-/async-0.2.9.tgz
+160 http 200 https://registry.npmjs.org/request/-/request-2.27.0.tgz
+161 http 200 https://registry.npmjs.org/async/-/async-0.2.9.tgz
+162 silly lockFile c060db57--npmjs-org-async-async-0-2-9-tgz https://registry.npmjs.org/async/-/async-0.2.9.tgz
+163 silly lockFile c060db57--npmjs-org-async-async-0-2-9-tgz https://registry.npmjs.org/async/-/async-0.2.9.tgz
+164 silly lockFile be62480b-async-0-2-9 async@0.2.9
+165 silly lockFile be62480b-async-0-2-9 async@0.2.9
+166 silly lockFile 601afcd9-s-org-request-request-2-27-0-tgz https://registry.npmjs.org/request/-/request-2.27.0.tgz
+167 silly lockFile 601afcd9-s-org-request-request-2-27-0-tgz https://registry.npmjs.org/request/-/request-2.27.0.tgz
+168 silly lockFile 7b48fbe0-request-2-27-0 request@2.27.0
+169 silly lockFile 7b48fbe0-request-2-27-0 request@2.27.0
+170 error Error: EACCES, mkdir '/home/taotao/.npm/cheerio/0.12.3'
+170 error  { [Error: EACCES, mkdir '/home/taotao/.npm/cheerio/0.12.3']
+170 error   errno: 3,
+170 error   code: 'EACCES',
+170 error   path: '/home/taotao/.npm/cheerio/0.12.3',
+170 error   parent: 'sina-blog-proxy' }
+171 error Please try running this command again as root/Administrator.
+172 error System Linux 3.13.0-61-generic
+173 error command "/usr/bin/node" "/usr/bin/npm" "install"
+174 error cwd /home/taotao/project/nodejs-study/node_crawl
+175 error node -v v0.10.37
+176 error npm -v 1.4.28
+177 error path /home/taotao/.npm/cheerio/0.12.3
+178 error code EACCES
+179 error errno 3
+180 error stack Error: EACCES, mkdir '/home/taotao/.npm/cheerio/0.12.3'
+181 verbose exit [ 3, true ]
