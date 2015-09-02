@@ -4,27 +4,25 @@ var debug = require('debug')('blog:update');
 
 debug('读取博文内容');
 
-//读取博文内容
-request('http://blog.sina.com.cn/s/blog_69e72a420102vkds.html', function (err, res) {
-    if (err)
-        return callback(err);
-    //根据网页内容创建DOM对象
-    var $ = cheerio.load(res.body.toString());
 
-    //获取文章标签
-    var tags = [];
-    $('.blog_tag h3 a').each(function () {
-        var tag = $(this).text().trim();
-        if (tag) {
-            tags.push(tag);
-        }
-    });
-    //获取文章内容
-    var content = $('.articalContent').html().trim();
-    //输出结果
-    console.log({tags: tags, content: content});
+//读取博文页面
+request('http://blog.sina.com.cn/s/blog_69e72a420101i0s6.html',function(err,res){
+	if(err)
+		return callback(err);
+	//根据网页内容创建dom操作对象
+	var $ = cheerio.load(res.body.toString());
+	//获取文章标签
+	var tags = [];
+	$('.blog_tag h3 a').each(function(){
+		var tag = $(this).text().trim();
+		if(tag){
+			tags.push(tag);
+		}
+	});
+	//获取文章内容
+	var content = $('.articalContent').html().trim();
+	//输出结果
+	console.log({tags:tags, content: content});
+
 });
-
-
-
 
