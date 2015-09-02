@@ -11,8 +11,9 @@ function readArticleList(url, callback) {
     request(url, function (err, res) {
         if (err)
             return callback(err);
-        //根据网页内容创建　DOM 操作对象
+        //根据网页内容创建DOM操作对象
         var $ = cheerio.load(res.body.toString());
+
         //读取博文列表
         var articleList = [];
         $('.articleList .articleCell').each(function () {
@@ -24,7 +25,7 @@ function readArticleList(url, callback) {
                 url: $title.attr('href'),
                 time: $time.text().trim()
             };
-            //从 URL 中取出文章的 ID
+            //从url中取出文章的id
             var s = item.url.match(/blog_([a-zA-Z0-9]+)\.html/);
             if (Array.isArray(s)) {
                 item.id = s[1];
@@ -40,10 +41,11 @@ function readArticleList(url, callback) {
  */
 function readArticleDetail(url, callback) {
     debug('读取博文内容: %s', url);
+
     request(url, function (err, res) {
         if (err)
             return callback(err);
-        //根据网页内容创建　DOM 操作对象
+        //根据网页内容创建DOM操作对象
         var $ = cheerio.load(res.body.toString());
 
         //获取文章标签
@@ -60,35 +62,33 @@ function readArticleDetail(url, callback) {
         callback(null, {tags: tags, content: content});
     });
 }
+//读取分类下的所有文章
+readArticleList('http://blog.sina.com.cn/s/articlelist_1776757314_0_1.html',function(err,articleList){
+   if(err)
+    return console.error(err.stack);
 
-
-//读取分类下的所有的文章
-readArticleList('http://blog.sina.com.cn/s/articlelist_1776757314_5_1.html', function (err, articleList) {
-    if (err)
-        return console.error(err.stack);
-    //依次取出 articleList　数组的每个元素，调用第二个参数中传入的函数
-    //函数的第一个参数即是　articleList 数组的其中一个元素
+    //依次取出　articleList 数组的每个元素，调用第二个参数传入的函数
+    //函数的第一个参数即是 articleList 数组的其中一个元素
     //函数的第二个参数是回调函数
     async.eachSeries(articleList,function(article,next){
         //读取文章内容
-        readArticleDetail(article.url, function(err,detail){
-            if(err)
-                console.error(err.stack);
+        readArticleDetail(article.url,function(err,detail){
+           if(err){
+               console.error(err.stack);
+           }
             //直接显示
             console.log(detail);
-
-            //需要调用　next()　来返回
+            //需要调用next()来返回
             next();
+        },function(err){
+            //当遍历完articleList后，执行此回调函数
+            if(err){
+                return console.error(err.stack);
+            }
+            console.log('完成');
         });
-    },function(err){
-        //当遍历完　articleList　后，执行此回调函数
-        if(err)
-            return console.error(err.stack);
-        console.log('完成');
     });
 });
-
-
 
 
 
