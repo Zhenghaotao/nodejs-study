@@ -4,6 +4,8 @@ blog/local.0
 blog/local.ns
 blog/mongod.lock
 node_crawl/blog/node_modules
+node_crawl/blog/npm-debug.log
+node_crawl/blog/.idea
 node_modules
 
 

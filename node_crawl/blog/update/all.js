@@ -3,7 +3,6 @@ var config = require('../config');
 var read = require('./read');
 var save = require('./save');
 var debug = require('debug')('blog:update:all');
-
 var classList;
 var articleList = {};
 
@@ -19,8 +18,8 @@ async.series([
          * 保存文章分类
          * @param done
          */
-        function(done){
-            save.classList(classList,done);
+            function (done) {
+            save.classList(classList, done);
         },
 
         /**

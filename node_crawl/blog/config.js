@@ -13,4 +13,7 @@ exports.sinaBlog = {
     url:'http://blog.sina.com.cn/u/1776757314'//博客首页地址
 };
 
+//web服务器端口
+exports.port = 3000;
+
 
