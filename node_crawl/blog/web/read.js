@@ -74,7 +74,7 @@ exports.articleListByClassId = function (classId, offset, limit, callback) {
         ' LEFT JOIN `article_detail` AS `B` ON `A`.`id`=`B`.`id`' +
         ' ORDER BY `created_time` DESC LIMIT ?,?';
     console.log(sql);
-    db.query(sql, [classId, offset, limit], callback);
+    db.query(sql, [offset, limit], callback);
 };
 /**
  * 获取指定标签的文章列表
